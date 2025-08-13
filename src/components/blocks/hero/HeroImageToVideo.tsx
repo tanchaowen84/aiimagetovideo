@@ -15,6 +15,9 @@ export function HeroImageToVideo() {
   const [job, setJob] = useState<HeroJob>({ id: 'local', status: 'idle' });
   const [isLoading, setIsLoading] = useState(false);
   const [promptInput, setPromptInput] = useState<string>('');
+  const [resolution, setResolution] = useState<'480p' | '580p' | '720p'>(
+    '480p'
+  );
 
   const onFileSelected = (file: File) => {
     const preview = URL.createObjectURL(file);
@@ -27,11 +30,11 @@ export function HeroImageToVideo() {
     }));
   };
 
-  const callFal = async (file: File, prompt: string) => {
+  const callFal = async (file: File, prompt: string, resolution: string) => {
     const form = new FormData();
     form.append('file', file);
     form.append('prompt', prompt);
-    form.append('resolution', '480p');
+    form.append('resolution', resolution);
 
     const res = await fetch('/api/fal/image-to-video', {
       method: 'POST',
@@ -68,7 +71,11 @@ export function HeroImageToVideo() {
       setIsLoading(true);
       setJob((j) => ({ ...j, status: 'processing', errorMessage: undefined }));
 
-      const videoUrl = await callFal(job.uploadedFile, promptInput.trim());
+      const videoUrl = await callFal(
+        job.uploadedFile,
+        promptInput.trim(),
+        resolution
+      );
 
       setJob((j) => ({ ...j, status: 'success', resultVideoUrl: videoUrl }));
     } catch (e: any) {
@@ -90,10 +97,11 @@ export function HeroImageToVideo() {
       <div className="mb-6 space-y-4">
         {/* Upload */}
         <div>
-          <label className="mb-2 block text-sm font-medium">
+          <label htmlFor="hero-file" className="mb-2 block text-sm font-medium">
             Upload Image (Required)
           </label>
           <input
+            id="hero-file"
             type="file"
             accept="image/jpeg,image/png,image/webp"
             onChange={(e) => {
@@ -101,7 +109,10 @@ export function HeroImageToVideo() {
               if (file) {
                 // Basic validation
                 if (file.size > 10 * 1024 * 1024) {
-                  setJob((j) => ({ ...j, errorMessage: 'File too large (max 10MB)' }));
+                  setJob((j) => ({
+                    ...j,
+                    errorMessage: 'File too large (max 10MB)',
+                  }));
                   return;
                 }
                 onFileSelected(file);
@@ -113,7 +124,10 @@ export function HeroImageToVideo() {
 
         {/* Prompt */}
         <div>
-          <label htmlFor="hero-prompt" className="mb-2 block text-sm font-medium">
+          <label
+            htmlFor="hero-prompt"
+            className="mb-2 block text-sm font-medium"
+          >
             Prompt (Required)
           </label>
           <textarea
@@ -128,6 +142,28 @@ export function HeroImageToVideo() {
           <div className="mt-1 text-right text-xs text-gray-500">
             {promptInput.length}/500
           </div>
+        </div>
+
+        {/* Resolution */}
+        <div>
+          <label
+            htmlFor="hero-resolution"
+            className="mb-2 block text-sm font-medium"
+          >
+            Resolution
+          </label>
+          <select
+            id="hero-resolution"
+            value={resolution}
+            onChange={(e) =>
+              setResolution(e.target.value as '480p' | '580p' | '720p')
+            }
+            className="block w-full rounded-md border bg-background px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <option value="480p">480p (Faster)</option>
+            <option value="580p">580p (Balanced)</option>
+            <option value="720p">720p (Higher Quality)</option>
+          </select>
         </div>
 
         {/* Generate Button */}
@@ -179,7 +215,9 @@ export function HeroImageToVideo() {
               draggable={false}
             />
           ) : (
-            <div className="text-gray-500 text-sm">Upload an image to get started</div>
+            <div className="text-gray-500 text-sm">
+              Upload an image to get started
+            </div>
           )}
         </div>
 
@@ -199,7 +237,9 @@ export function HeroImageToVideo() {
               controls
             />
           ) : (
-            <div className="text-gray-500 text-sm">Generated video will appear here</div>
+            <div className="text-gray-500 text-sm">
+              Generated video will appear here
+            </div>
           )}
         </div>
       </div>
