@@ -13,7 +13,7 @@ import {
 import { Textarea } from '@/components/ui/textarea';
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/outline';
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 interface HeroJob {
   id: string;
@@ -32,6 +32,7 @@ export function HeroImageToVideo() {
     '480p'
   );
   const [showAdvanced, setShowAdvanced] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const onFileSelected = (file: File) => {
     const preview = URL.createObjectURL(file);
@@ -139,6 +140,7 @@ export function HeroImageToVideo() {
                     </label>
                     <div className="relative">
                       <ShadcnInput
+                        ref={fileInputRef}
                         id="hero-file"
                         type="file"
                         accept="image/jpeg,image/png,image/webp"
@@ -210,6 +212,11 @@ export function HeroImageToVideo() {
                             variant="destructive"
                             className="absolute top-2 right-2 h-8 w-8 p-0"
                             onClick={() => {
+                              // Reset file input value to allow re-uploading the same file
+                              if (fileInputRef.current) {
+                                fileInputRef.current.value = '';
+                              }
+
                               setJob((j) => ({
                                 ...j,
                                 status: 'idle',
