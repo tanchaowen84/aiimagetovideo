@@ -441,48 +441,66 @@ export function HeroImageToVideo() {
                 )}
               </div>
 
-              {/* Success Actions */}
-              {job.status === 'success' && job.resultVideoUrl && (
-                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                  <div className="flex items-center gap-2 mb-3">
-                    <svg
-                      className="h-5 w-5 text-green-400"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.236 4.53L7.53 10.53a.75.75 0 00-1.06 1.06l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <span className="text-sm font-medium text-green-800">
-                      Generated successfully!
-                    </span>
+              {/* Status Section - matches left side's Describe Motion */}
+              <div>
+                <h4 className="block text-sm font-medium text-gray-700 mb-3">
+                  Status
+                </h4>
+                {job.status === 'success' && job.resultVideoUrl ? (
+                  <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                    <div className="flex items-center gap-2 mb-3">
+                      <svg
+                        className="h-5 w-5 text-green-400"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.236 4.53L7.53 10.53a.75.75 0 00-1.06 1.06l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      <span className="text-sm font-medium text-green-800">
+                        Generated successfully!
+                      </span>
+                    </div>
+                    <div className="flex gap-2">
+                      <button
+                        type="button"
+                        className="inline-flex items-center px-3 py-1.5 border border-green-300 text-xs font-medium rounded text-green-700 bg-white hover:bg-green-50 transition-colors"
+                      >
+                        Save
+                      </button>
+                      <button
+                        type="button"
+                        className="inline-flex items-center px-3 py-1.5 border border-green-300 text-xs font-medium rounded text-green-700 bg-white hover:bg-green-50 transition-colors"
+                      >
+                        Share
+                      </button>
+                      <button
+                        type="button"
+                        onClick={onGenerate}
+                        className="inline-flex items-center px-3 py-1.5 border border-green-300 text-xs font-medium rounded text-green-700 bg-white hover:bg-green-50 transition-colors"
+                      >
+                        Generate Again
+                      </button>
+                    </div>
                   </div>
-                  <div className="flex gap-2">
-                    <button
-                      type="button"
-                      className="inline-flex items-center px-3 py-1.5 border border-green-300 text-xs font-medium rounded text-green-700 bg-white hover:bg-green-50 transition-colors"
-                    >
-                      Save
-                    </button>
-                    <button
-                      type="button"
-                      className="inline-flex items-center px-3 py-1.5 border border-green-300 text-xs font-medium rounded text-green-700 bg-white hover:bg-green-50 transition-colors"
-                    >
-                      Share
-                    </button>
-                    <button
-                      type="button"
-                      onClick={onGenerate}
-                      className="inline-flex items-center px-3 py-1.5 border border-green-300 text-xs font-medium rounded text-green-700 bg-white hover:bg-green-50 transition-colors"
-                    >
-                      Generate Again
-                    </button>
+                ) : (
+                  <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 text-center">
+                    <p className="text-sm text-gray-500">
+                      {job.status === 'idle' && 'Ready to generate'}
+                      {job.status === 'uploaded' &&
+                        'Image uploaded, add prompt to continue'}
+                      {job.status === 'processing' && 'Generating video...'}
+                      {job.status === 'failed' && 'Generation failed'}
+                    </p>
                   </div>
-                </div>
-              )}
+                )}
+              </div>
+
+              {/* Placeholder for alignment with left side's Advanced Options */}
+              <div className="h-12" />
             </div>
           </div>
         </div>
