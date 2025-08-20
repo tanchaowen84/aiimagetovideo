@@ -1,8 +1,8 @@
 {
   "Metadata": {
-    "name": "FlowChart AI",
-    "title": "FlowChart AI – Smart AI Tool to Create Beautiful Flowcharts",
-    "description": "Design professional flowcharts faster with FlowChart AI. Draw, edit, and collaborate in real time using powerful AI tools—no design experience required."
+    "name": "AI Image to Video",
+    "title": "AI Image to Video – Transform Your Images with AI",
+    "description": "Create stunning videos from any image using AI. Simple, fast, and no experience needed."
   },
   "Common": {
     "login": "Log in",
@@ -596,12 +596,12 @@
     }
   },
   "HomePage": {
-    "title": "MkSaaS",
-    "description": "Make AI SaaS in days, simply and effortlessly",
+    "title": "AI Image to Video",
+    "description": "Transform Your Images with AI",
     "hero": {
-      "title": "Create Beautiful Flowcharts with FlowChart AI",
-      "description": "FlowChart AI helps you transform ideas into detailed, professional flowcharts instantly. Use natural language to design, edit, and collaborate on diagrams—no design skills required.",
-      "introduction": "Introducing FlowChart AI",
+      "title": "AI Image to Video - Transform Your Images with AI",
+      "description": "Create stunning videos from any image using AI. Simple, fast, and no experience needed.",
+      "introduction": "Introducing AI Image to Video",
       "primary": "Start Creating",
       "secondary": "See Demo"
     },
