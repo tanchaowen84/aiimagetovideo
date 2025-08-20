@@ -316,11 +316,9 @@ export function HeroImageToVideo() {
             {/* Right Panel - Preview */}
             <div className="space-y-6">
               {/* Video Preview Title */}
-              <div>
-                <h3 className="block text-sm font-medium text-gray-700 mb-3">
-                  Video Preview
-                </h3>
-              </div>
+              <h3 className="block text-sm font-medium text-gray-700 mb-3">
+                Video Preview
+              </h3>
 
               {/* Error Banner */}
               {job.status === 'failed' && job.errorMessage && (
