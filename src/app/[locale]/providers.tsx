@@ -4,6 +4,7 @@ import { ActiveThemeProvider } from '@/components/layout/active-theme-provider';
 import { PaymentProvider } from '@/components/layout/payment-provider';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { websiteConfig } from '@/config/website';
+import { HeroUIProvider } from '@heroui/react';
 import { RootProvider } from 'fumadocs-ui/provider';
 import { ThemeProvider, useTheme } from 'next-themes';
 import type { PropsWithChildren } from 'react';
@@ -31,11 +32,17 @@ export function Providers({ children }: PropsWithChildren) {
       disableTransitionOnChange
     >
       <ActiveThemeProvider>
-        <RootProvider theme={theme}>
-          <TooltipProvider>
-            <PaymentProvider>{children}</PaymentProvider>
-          </TooltipProvider>
-        </RootProvider>
+        <HeroUIProvider
+          navigate={(path) => {
+            window.location.href = path;
+          }}
+        >
+          <RootProvider theme={theme}>
+            <TooltipProvider>
+              <PaymentProvider>{children}</PaymentProvider>
+            </TooltipProvider>
+          </RootProvider>
+        </HeroUIProvider>
       </ActiveThemeProvider>
     </ThemeProvider>
   );
