@@ -1,5 +1,7 @@
 'use client';
 
+import { Button as ShadcnButton } from '@/components/ui/button';
+import { CardContent, Card as ShadcnCard } from '@/components/ui/card';
 import { Input as ShadcnInput } from '@/components/ui/input';
 import {
   Select,
@@ -8,15 +10,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import { Textarea } from '@/components/ui/textarea';
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/outline';
-import {
-  Button,
-  Card,
-  CardBody,
-  CardHeader,
-  Chip,
-  Divider,
-} from '@heroui/react';
 
 import React, { useState } from 'react';
 
@@ -131,8 +126,8 @@ export function HeroImageToVideo() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Left Panel - Input Controls */}
-            <Card className="bg-gray-800/50 backdrop-blur-sm border-gray-700">
-              <CardBody className="p-6">
+            <ShadcnCard className="bg-gray-800/50 backdrop-blur-sm border-gray-700">
+              <CardContent className="p-6">
                 <div className="space-y-6">
                   {/* Upload Section */}
                   <div>
@@ -210,12 +205,10 @@ export function HeroImageToVideo() {
                             alt="Uploaded preview"
                             className="w-full h-full object-cover"
                           />
-                          <Button
-                            isIconOnly
+                          <ShadcnButton
                             size="sm"
-                            color="danger"
-                            variant="solid"
-                            className="absolute top-2 right-2"
+                            variant="destructive"
+                            className="absolute top-2 right-2 h-8 w-8 p-0"
                             onClick={() => {
                               setJob((j) => ({
                                 ...j,
@@ -228,7 +221,7 @@ export function HeroImageToVideo() {
                             }}
                           >
                             ×
-                          </Button>
+                          </ShadcnButton>
                         </div>
                       )}
                     </div>
@@ -243,14 +236,14 @@ export function HeroImageToVideo() {
                       >
                         Describe Motion
                       </label>
-                      <textarea
+                      <Textarea
                         id="motion-textarea"
                         placeholder="What should happen in the video..."
                         value={promptInput}
                         onChange={(e) => setPromptInput(e.target.value)}
                         maxLength={500}
                         rows={4}
-                        className="w-full resize-none rounded-md border border-gray-600 bg-gray-800/50 px-3 py-2 text-white placeholder:text-gray-400 focus:border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500"
+                        className="w-full resize-none border-gray-600 bg-gray-800/50 text-white placeholder:text-gray-400 focus:border-gray-500 focus:ring-gray-500"
                       />
                       <p className="text-xs text-gray-400">
                         {promptInput.length}/500 characters
@@ -260,20 +253,19 @@ export function HeroImageToVideo() {
 
                   {/* Advanced Options */}
                   <div className="mt-4">
-                    <Button
-                      variant="light"
+                    <ShadcnButton
+                      variant="ghost"
                       size="sm"
                       onClick={() => setShowAdvanced(!showAdvanced)}
-                      startContent={
-                        showAdvanced ? (
-                          <ChevronUpIcon className="w-4 h-4" />
-                        ) : (
-                          <ChevronDownIcon className="w-4 h-4" />
-                        )
-                      }
+                      className="flex items-center gap-2"
                     >
+                      {showAdvanced ? (
+                        <ChevronUpIcon className="w-4 h-4" />
+                      ) : (
+                        <ChevronDownIcon className="w-4 h-4" />
+                      )}
                       Advanced Options
-                    </Button>
+                    </ShadcnButton>
 
                     {showAdvanced && (
                       <div className="mt-4 space-y-4">
@@ -323,14 +315,13 @@ export function HeroImageToVideo() {
                   </div>
 
                   {/* Generate Button */}
-                  <Button
-                    color="primary"
+                  <ShadcnButton
                     size="lg"
                     onClick={onGenerate}
-                    isDisabled={!canGenerate}
-                    isLoading={isLoading}
-                    className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700"
-                    spinner={
+                    disabled={!canGenerate || isLoading}
+                    className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 flex items-center gap-2"
+                  >
+                    {isLoading && (
                       <svg
                         className="animate-spin h-5 w-5"
                         xmlns="http://www.w3.org/2000/svg"
@@ -351,17 +342,16 @@ export function HeroImageToVideo() {
                           d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                         />
                       </svg>
-                    }
-                  >
+                    )}
                     {isLoading ? 'Processing...' : 'Generate Video'}
-                  </Button>
+                  </ShadcnButton>
                 </div>
-              </CardBody>
-            </Card>
+              </CardContent>
+            </ShadcnCard>
 
             {/* Right Panel - Results */}
-            <Card className="bg-gray-800/50 backdrop-blur-sm border-gray-700">
-              <CardBody className="p-6">
+            <ShadcnCard className="bg-gray-800/50 backdrop-blur-sm border-gray-700">
+              <CardContent className="p-6">
                 <div className="space-y-6">
                   {/* Video Preview Title */}
                   <h3 className="block text-sm font-medium text-gray-300 mb-3">
@@ -370,8 +360,8 @@ export function HeroImageToVideo() {
 
                   {/* Error Banner */}
                   {job.status === 'failed' && job.errorMessage && (
-                    <Card className="border-red-500/50 bg-red-900/20">
-                      <CardBody className="p-4">
+                    <ShadcnCard className="border-red-500/50 bg-red-900/20">
+                      <CardContent className="p-4">
                         <div className="flex items-start gap-3">
                           <div className="flex-shrink-0">
                             <svg
@@ -393,27 +383,26 @@ export function HeroImageToVideo() {
                             <p className="mt-1 text-sm text-red-200">
                               {job.errorMessage}
                             </p>
-                            <Button
+                            <ShadcnButton
                               size="sm"
-                              color="danger"
-                              variant="bordered"
+                              variant="outline"
                               onClick={onGenerate}
-                              className="mt-3"
+                              className="mt-3 border-red-500 text-red-300 hover:bg-red-500/10"
                             >
                               Try Again
-                            </Button>
+                            </ShadcnButton>
                           </div>
                         </div>
-                      </CardBody>
-                    </Card>
+                      </CardContent>
+                    </ShadcnCard>
                   )}
 
                   {/* Video Preview */}
-                  <Card
+                  <ShadcnCard
                     className="bg-gray-800/30 border-gray-600"
                     style={{ aspectRatio: '16 / 9' }}
                   >
-                    <CardBody className="p-0 flex items-center justify-center">
+                    <CardContent className="p-0 flex items-center justify-center">
                       {job.resultVideoUrl ? (
                         <video
                           src={job.resultVideoUrl}
@@ -443,84 +432,14 @@ export function HeroImageToVideo() {
                           </p>
                         </div>
                       )}
-                    </CardBody>
-                  </Card>
-
-                  {/* Status Section */}
-                  <div>
-                    <h4 className="block text-sm font-medium text-gray-300 mb-3">
-                      Status
-                    </h4>
-                    {job.status === 'success' && job.resultVideoUrl ? (
-                      <Card className="border-green-500/50 bg-green-900/20">
-                        <CardBody className="p-4">
-                          <div className="flex items-center gap-2 mb-3">
-                            <svg
-                              className="h-5 w-5 text-green-400"
-                              viewBox="0 0 20 20"
-                              fill="currentColor"
-                            >
-                              <path
-                                fillRule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.236 4.53L7.53 10.53a.75.75 0 00-1.06 1.06l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                                clipRule="evenodd"
-                              />
-                            </svg>
-                            <span className="text-sm font-medium text-green-300">
-                              Generated successfully!
-                            </span>
-                          </div>
-                          <div className="flex gap-2">
-                            <Button
-                              size="sm"
-                              color="success"
-                              variant="bordered"
-                            >
-                              Save
-                            </Button>
-                            <Button
-                              size="sm"
-                              color="success"
-                              variant="bordered"
-                            >
-                              Share
-                            </Button>
-                          </div>
-                        </CardBody>
-                      </Card>
-                    ) : (
-                      <Card className="bg-gray-800/30 border-gray-600">
-                        <CardBody className="p-4 text-center">
-                          <Chip
-                            color={
-                              job.status === 'idle'
-                                ? 'default'
-                                : job.status === 'uploaded'
-                                  ? 'primary'
-                                  : job.status === 'processing'
-                                    ? 'warning'
-                                    : 'danger'
-                            }
-                            variant="flat"
-                            size="sm"
-                          >
-                            {job.status === 'idle' && 'Ready to generate'}
-                            {job.status === 'uploaded' &&
-                              'Image uploaded, add prompt to continue'}
-                            {job.status === 'processing' &&
-                              'Generating video...'}
-                            {job.status === 'failed' && 'Generation failed'}
-                          </Chip>
-                        </CardBody>
-                      </Card>
-                    )}
-                  </div>
+                    </CardContent>
+                  </ShadcnCard>
 
                   {/* Placeholder for alignment with left side's Advanced Options */}
                   <div className="h-12" />
                 </div>
-              </CardBody>
-            </Card>
+              </CardContent>
+            </ShadcnCard>
           </div>
         </div>
       </div>

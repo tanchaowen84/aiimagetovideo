@@ -321,21 +321,6 @@ body {
   @apply overscroll-none bg-transparent;
 }
 
-/* HeroUI component fixes */
-[data-slot="base"],
-[data-slot="input-wrapper"],
-[data-slot="inner-wrapper"],
-[data-slot="input"],
-[data-slot="label"],
-[data-slot="description"],
-[data-slot="trigger"],
-[data-slot="listbox-wrapper"],
-[data-slot="listbox"],
-[data-slot="popover-content"] {
-  border: revert;
-  outline: revert;
-}
-
 .text-gradient_indigo-purple {
   background: linear-gradient(90deg, #6366f1 0%, rgb(168 85 247 / 0.8) 100%);
   -webkit-background-clip: text;
