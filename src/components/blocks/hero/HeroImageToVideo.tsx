@@ -144,45 +144,66 @@ export function HeroImageToVideo() {
                     }}
                     className="hidden"
                   />
-                  <label
-                    htmlFor="hero-file"
-                    className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100 transition-colors"
-                  >
-                    <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                      <svg
-                        className="w-8 h-8 mb-4 text-gray-500"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 20 16"
+                  {!job.inputImagePreviewUrl ? (
+                    <label
+                      htmlFor="hero-file"
+                      className="flex flex-col items-center justify-center w-full border-2 border-dashed border-gray-300 rounded-xl cursor-pointer bg-gray-50 hover:bg-gray-100 transition-colors"
+                      style={{ aspectRatio: '16 / 9' }}
+                    >
+                      <div className="flex flex-col items-center justify-center pt-5 pb-6">
+                        <svg
+                          className="w-8 h-8 mb-4 text-gray-500"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 20 16"
+                        >
+                          <path
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"
+                          />
+                        </svg>
+                        <p className="mb-2 text-sm text-gray-500">
+                          <span className="font-semibold">Click to upload</span>{' '}
+                          or drag and drop
+                        </p>
+                        <p className="text-xs text-gray-500">
+                          JPG, PNG, WebP (MAX. 10MB)
+                        </p>
+                      </div>
+                    </label>
+                  ) : (
+                    <div
+                      className="relative rounded-xl border-2 border-dashed border-gray-300 bg-gray-50 overflow-hidden"
+                      style={{ aspectRatio: '16 / 9' }}
+                    >
+                      <img
+                        src={job.inputImagePreviewUrl}
+                        alt="Uploaded preview"
+                        className="w-full h-full object-cover"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setJob((j) => ({
+                            ...j,
+                            status: 'idle',
+                            inputImagePreviewUrl: undefined,
+                            uploadedFile: undefined,
+                            resultVideoUrl: undefined,
+                            errorMessage: undefined,
+                          }));
+                        }}
+                        className="absolute top-2 right-2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs hover:bg-red-600 transition-colors"
                       >
-                        <path
-                          stroke="currentColor"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"
-                        />
-                      </svg>
-                      <p className="mb-2 text-sm text-gray-500">
-                        <span className="font-semibold">Click to upload</span>{' '}
-                        or drag and drop
-                      </p>
-                      <p className="text-xs text-gray-500">
-                        JPG, PNG, WebP (MAX. 10MB)
-                      </p>
+                        ×
+                      </button>
                     </div>
-                  </label>
+                  )}
                 </div>
-                {job.inputImagePreviewUrl && (
-                  <div className="mt-3">
-                    <img
-                      src={job.inputImagePreviewUrl}
-                      alt="Preview"
-                      className="w-full h-24 object-cover rounded-lg"
-                    />
-                  </div>
-                )}
               </div>
 
               {/* Prompt Section */}
@@ -202,42 +223,7 @@ export function HeroImageToVideo() {
                   placeholder="What should happen in the video..."
                   maxLength={500}
                 />
-                <div className="flex items-center justify-between mt-2">
-                  <div className="flex gap-2">
-                    <button
-                      type="button"
-                      onClick={() =>
-                        setPromptInput(
-                          (prev) => prev + (prev ? ' ' : '') + 'walking'
-                        )
-                      }
-                      className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 cursor-pointer hover:bg-blue-200 transition-colors"
-                    >
-                      💡 walking
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() =>
-                        setPromptInput(
-                          (prev) => prev + (prev ? ' ' : '') + 'flying'
-                        )
-                      }
-                      className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 cursor-pointer hover:bg-blue-200 transition-colors"
-                    >
-                      💡 flying
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() =>
-                        setPromptInput(
-                          (prev) => prev + (prev ? ' ' : '') + 'dancing'
-                        )
-                      }
-                      className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 cursor-pointer hover:bg-blue-200 transition-colors"
-                    >
-                      💡 dancing
-                    </button>
-                  </div>
+                <div className="flex justify-end mt-2">
                   <span className="text-xs text-gray-500">
                     {promptInput.length}/500
                   </span>
@@ -251,7 +237,7 @@ export function HeroImageToVideo() {
                   onClick={() => setShowAdvanced(!showAdvanced)}
                   className="flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors"
                 >
-                  ⚙️ Advanced Options
+                  Advanced Options
                   {showAdvanced ? (
                     <ChevronUpIcon className="w-4 h-4" />
                   ) : (
@@ -322,13 +308,20 @@ export function HeroImageToVideo() {
                     Processing...
                   </>
                 ) : (
-                  <>🚀 Generate Video</>
+                  <>Generate Video</>
                 )}
               </button>
             </div>
 
             {/* Right Panel - Preview */}
             <div className="space-y-6">
+              {/* Video Preview Title */}
+              <div>
+                <h3 className="block text-sm font-medium text-gray-700 mb-3">
+                  Video Preview
+                </h3>
+              </div>
+
               {/* Error Banner */}
               {job.status === 'failed' && job.errorMessage && (
                 <div className="rounded-lg border border-red-300 bg-red-50 p-4">
@@ -358,7 +351,7 @@ export function HeroImageToVideo() {
                         onClick={onGenerate}
                         className="mt-3 inline-flex items-center px-3 py-1.5 border border-red-300 text-xs font-medium rounded text-red-700 bg-white hover:bg-red-50 transition-colors"
                       >
-                        🔄 Try Again
+                        Try Again
                       </button>
                     </div>
                   </div>
@@ -390,7 +383,7 @@ export function HeroImageToVideo() {
                       />
                     </svg>
                     <h3 className="text-lg font-medium text-blue-900 mb-2">
-                      ⏳ Generating video...
+                      Generating video...
                     </h3>
                     <p className="text-sm text-blue-700 mb-4">
                       This may take a few moments
@@ -402,11 +395,11 @@ export function HeroImageToVideo() {
                       />
                     </div>
                     <p className="text-xs text-blue-600 mt-2">
-                      🎯 "{promptInput.slice(0, 50)}
+                      "{promptInput.slice(0, 50)}
                       {promptInput.length > 50 ? '...' : ''}"
                     </p>
                     <p className="text-xs text-blue-600">
-                      ⏱️ ~30 seconds remaining
+                      ~30 seconds remaining
                     </p>
                   </div>
                 </div>
@@ -431,7 +424,15 @@ export function HeroImageToVideo() {
                   </div>
                 ) : (
                   <div className="text-center p-8">
-                    <div className="text-6xl mb-4">🎬</div>
+                    <div className="text-6xl mb-4 text-gray-400">
+                      <svg
+                        className="w-16 h-16 mx-auto"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M2 6a2 2 0 012-2h6l2 2h6a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM5 8a1 1 0 011-1h1a1 1 0 010 2H6a1 1 0 01-1-1zm6 1a1 1 0 100 2h3a1 1 0 100-2h-3z" />
+                      </svg>
+                    </div>
                     <h3 className="text-lg font-medium text-gray-900 mb-2">
                       Your video will appear here
                     </h3>
@@ -458,7 +459,7 @@ export function HeroImageToVideo() {
                       />
                     </svg>
                     <span className="text-sm font-medium text-green-800">
-                      ✅ Generated successfully!
+                      Generated successfully!
                     </span>
                   </div>
                   <div className="flex gap-2">
@@ -466,20 +467,20 @@ export function HeroImageToVideo() {
                       type="button"
                       className="inline-flex items-center px-3 py-1.5 border border-green-300 text-xs font-medium rounded text-green-700 bg-white hover:bg-green-50 transition-colors"
                     >
-                      💾 Save
+                      Save
                     </button>
                     <button
                       type="button"
                       className="inline-flex items-center px-3 py-1.5 border border-green-300 text-xs font-medium rounded text-green-700 bg-white hover:bg-green-50 transition-colors"
                     >
-                      🔗 Share
+                      Share
                     </button>
                     <button
                       type="button"
                       onClick={onGenerate}
                       className="inline-flex items-center px-3 py-1.5 border border-green-300 text-xs font-medium rounded text-green-700 bg-white hover:bg-green-50 transition-colors"
                     >
-                      🔄 Generate Again
+                      Generate Again
                     </button>
                   </div>
                 </div>
