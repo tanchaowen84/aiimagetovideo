@@ -1,9 +1,12 @@
 import { Analytics } from '@/analytics/analytics';
 import {
   fontBricolageGrotesque,
+  fontInter,
+  fontJetBrainsMono,
   fontNotoSans,
   fontNotoSansMono,
   fontNotoSerif,
+  fontOswald,
 } from '@/assets/fonts';
 import AffonsoScript from '@/components/affiliate/affonso';
 import PromotekitScript from '@/components/affiliate/promotekit';
@@ -51,10 +54,13 @@ export default async function LocaleLayout({
         suppressHydrationWarning
         className={cn(
           'size-full antialiased',
-          fontNotoSans.className,
+          fontInter.className,
+          fontNotoSans.variable,
           fontNotoSerif.variable,
           fontNotoSansMono.variable,
-          fontBricolageGrotesque.variable
+          fontJetBrainsMono.variable,
+          fontBricolageGrotesque.variable,
+          fontOswald.variable
         )}
       >
         <NextIntlClientProvider>

@@ -119,13 +119,13 @@ export function HeroImageToVideo() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Hero Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+          <h1 className="text-4xl font-oswald font-bold tracking-wide text-white sm:text-6xl lg:text-7xl uppercase text-cinema-title">
             AI Image to Video
           </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-300 max-w-2xl mx-auto">
+          <p className="mt-6 text-xl font-inter font-medium leading-8 text-gray-200 max-w-2xl mx-auto tracking-wide text-cinema-subtitle">
             Transform Your Images with AI
           </p>
-          <p className="mt-4 text-base text-gray-400 max-w-3xl mx-auto">
+          <p className="mt-4 text-lg font-inter text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Create stunning videos from any image using AI. Simple, fast, and no
             experience needed.
           </p>
@@ -142,7 +142,7 @@ export function HeroImageToVideo() {
                   <div>
                     <label
                       htmlFor="hero-file"
-                      className="block text-sm font-medium text-gray-300 mb-3"
+                      className="block text-sm font-inter font-semibold text-gray-200 mb-3 tracking-wide uppercase"
                     >
                       Upload Image
                     </label>
@@ -193,13 +193,13 @@ export function HeroImageToVideo() {
                                   d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"
                                 />
                               </svg>
-                              <p className="mb-2 text-sm text-gray-300">
-                                <span className="font-semibold">
+                              <p className="mb-2 text-sm font-inter text-gray-200">
+                                <span className="font-bold tracking-wide">
                                   Click to upload
                                 </span>{' '}
                                 or drag and drop
                               </p>
-                              <p className="text-xs text-gray-400">
+                              <p className="text-xs font-inter text-gray-400 tracking-wide">
                                 JPG, PNG, WebP (MAX. 10MB)
                               </p>
                             </div>
@@ -247,7 +247,7 @@ export function HeroImageToVideo() {
                     <div className="space-y-2">
                       <label
                         htmlFor="motion-textarea"
-                        className="text-sm font-medium text-white"
+                        className="text-sm font-inter font-semibold text-white tracking-wide uppercase"
                       >
                         Describe Motion
                       </label>
@@ -258,9 +258,9 @@ export function HeroImageToVideo() {
                         onChange={(e) => setPromptInput(e.target.value)}
                         maxLength={500}
                         rows={4}
-                        className="w-full resize-none border-gray-600 bg-gray-800/50 text-white placeholder:text-gray-400 focus:border-gray-500 focus:ring-gray-500"
+                        className="w-full resize-none border-gray-600 bg-gray-800/50 text-white placeholder:text-gray-400 focus:border-gray-500 focus:ring-gray-500 font-inter"
                       />
-                      <p className="text-xs text-gray-400">
+                      <p className="text-xs font-inter text-gray-400 tracking-wide">
                         {promptInput.length}/500 characters
                       </p>
                     </div>
@@ -272,7 +272,7 @@ export function HeroImageToVideo() {
                       variant="ghost"
                       size="sm"
                       onClick={() => setShowAdvanced(!showAdvanced)}
-                      className="flex items-center gap-2"
+                      className="flex items-center gap-2 font-inter font-medium tracking-wide"
                     >
                       {showAdvanced ? (
                         <ChevronUpIcon className="w-4 h-4" />
@@ -287,7 +287,7 @@ export function HeroImageToVideo() {
                         <div className="space-y-2">
                           <label
                             htmlFor="resolution-select"
-                            className="text-sm font-medium text-white"
+                            className="text-sm font-inter font-semibold text-white tracking-wide uppercase"
                           >
                             Resolution
                           </label>
@@ -334,7 +334,7 @@ export function HeroImageToVideo() {
                     size="lg"
                     onClick={onGenerate}
                     disabled={!canGenerate || isLoading}
-                    className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 flex items-center gap-2"
+                    className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 flex items-center gap-2 font-inter font-bold tracking-wide uppercase btn-cinema"
                   >
                     {isLoading && (
                       <svg
@@ -369,7 +369,7 @@ export function HeroImageToVideo() {
               <CardContent className="p-6">
                 <div className="space-y-6">
                   {/* Video Preview Title */}
-                  <h3 className="block text-sm font-medium text-gray-300 mb-3">
+                  <h3 className="block text-sm font-inter font-semibold text-gray-200 mb-3 tracking-wide uppercase">
                     Video Preview
                   </h3>
 
@@ -392,17 +392,17 @@ export function HeroImageToVideo() {
                             </svg>
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-sm font-medium text-red-300">
+                            <h3 className="text-sm font-inter font-semibold text-red-300 tracking-wide">
                               Something went wrong
                             </h3>
-                            <p className="mt-1 text-sm text-red-200">
+                            <p className="mt-1 text-sm font-inter text-red-200">
                               {job.errorMessage}
                             </p>
                             <ShadcnButton
                               size="sm"
                               variant="outline"
                               onClick={onGenerate}
-                              className="mt-3 border-red-500 text-red-300 hover:bg-red-500/10"
+                              className="mt-3 border-red-500 text-red-300 hover:bg-red-500/10 font-inter font-medium tracking-wide"
                             >
                               Try Again
                             </ShadcnButton>
@@ -439,10 +439,10 @@ export function HeroImageToVideo() {
                               <path d="M2 6a2 2 0 012-2h6l2 2h6a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM5 8a1 1 0 011-1h1a1 1 0 010 2H6a1 1 0 01-1-1zm6 1a1 1 0 100 2h3a1 1 0 100-2h-3z" />
                             </svg>
                           </div>
-                          <h3 className="text-lg font-medium text-gray-200 mb-2">
+                          <h3 className="text-lg font-inter font-semibold text-gray-200 mb-2 tracking-wide">
                             Your video will appear here
                           </h3>
-                          <p className="text-sm text-gray-400">
+                          <p className="text-sm font-inter text-gray-400">
                             Upload an image and add a prompt to get started
                           </p>
                         </div>

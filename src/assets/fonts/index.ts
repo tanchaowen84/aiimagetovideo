@@ -1,8 +1,11 @@
 import {
   Bricolage_Grotesque,
+  Inter,
+  JetBrains_Mono,
   Noto_Sans,
   Noto_Sans_Mono,
   Noto_Serif,
+  Oswald,
 } from 'next/font/google';
 
 /**
@@ -61,5 +64,29 @@ export const fontBricolageGrotesque = Bricolage_Grotesque({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-bricolage-grotesque',
+  weight: ['400', '500', '600', '700'],
+});
+
+// https://fonts.google.com/specimen/Inter
+export const fontInter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
+});
+
+// https://fonts.google.com/specimen/Oswald
+export const fontOswald = Oswald({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-oswald',
+  weight: ['300', '400', '500', '600', '700'],
+});
+
+// https://fonts.google.com/specimen/JetBrains+Mono
+export const fontJetBrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-jetbrains-mono',
   weight: ['400', '500', '600', '700'],
 });

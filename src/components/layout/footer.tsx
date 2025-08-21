@@ -26,13 +26,13 @@ export function Footer({ className }: React.HTMLAttributes<HTMLElement>) {
               {/* logo and name */}
               <div className="items-center space-x-2 flex">
                 <Logo />
-                <span className="text-xl font-semibold">
+                <span className="text-xl font-inter font-bold tracking-wide">
                   {t('Metadata.name')}
                 </span>
               </div>
 
               {/* tagline */}
-              <p className="text-muted-foreground text-base py-2 md:pr-12">
+              <p className="text-muted-foreground text-base font-inter py-2 md:pr-12">
                 {t('Marketing.footer.tagline')}
               </p>
 
