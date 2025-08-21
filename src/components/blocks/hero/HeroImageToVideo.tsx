@@ -125,7 +125,7 @@ export function HeroImageToVideo() {
           <p className="mt-6 text-xl font-inter font-medium leading-8 text-gray-200 max-w-2xl mx-auto tracking-wide text-cinema-subtitle">
             Transform Your Images with AI
           </p>
-          <p className="mt-4 text-lg font-inter text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="mt-4 text-lg font-inter text-gray-300 max-w-3xl mx-auto leading-relaxed text-cinema-description">
             Create stunning videos from any image using AI. Simple, fast, and no
             experience needed.
           </p>
@@ -432,11 +432,116 @@ export function HeroImageToVideo() {
                         <div className="text-center p-8">
                           <div className="text-6xl mb-4 text-gray-500">
                             <svg
-                              className="w-16 h-16 mx-auto"
-                              fill="currentColor"
-                              viewBox="0 0 20 20"
+                              className="w-16 h-16 mx-auto video-preview-icon"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="1.5"
+                              viewBox="0 0 24 24"
                             >
-                              <path d="M2 6a2 2 0 012-2h6l2 2h6a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM5 8a1 1 0 011-1h1a1 1 0 010 2H6a1 1 0 01-1-1zm6 1a1 1 0 100 2h3a1 1 0 100-2h-3z" />
+                              {/* Film strip background */}
+                              <rect
+                                x="2"
+                                y="4"
+                                width="20"
+                                height="16"
+                                rx="2"
+                                ry="2"
+                                stroke="currentColor"
+                                strokeWidth="1.5"
+                                fill="none"
+                              />
+                              <rect
+                                x="2"
+                                y="6"
+                                width="2"
+                                height="2"
+                                fill="currentColor"
+                              />
+                              <rect
+                                x="2"
+                                y="10"
+                                width="2"
+                                height="2"
+                                fill="currentColor"
+                              />
+                              <rect
+                                x="2"
+                                y="14"
+                                width="2"
+                                height="2"
+                                fill="currentColor"
+                              />
+                              <rect
+                                x="2"
+                                y="18"
+                                width="2"
+                                height="2"
+                                fill="currentColor"
+                              />
+                              <rect
+                                x="20"
+                                y="6"
+                                width="2"
+                                height="2"
+                                fill="currentColor"
+                              />
+                              <rect
+                                x="20"
+                                y="10"
+                                width="2"
+                                height="2"
+                                fill="currentColor"
+                              />
+                              <rect
+                                x="20"
+                                y="14"
+                                width="2"
+                                height="2"
+                                fill="currentColor"
+                              />
+                              <rect
+                                x="20"
+                                y="18"
+                                width="2"
+                                height="2"
+                                fill="currentColor"
+                              />
+
+                              {/* Play button in center */}
+                              <polygon
+                                points="10,8 10,16 16,12"
+                                fill="currentColor"
+                              />
+
+                              {/* AI sparkles */}
+                              <circle
+                                cx="7"
+                                cy="3"
+                                r="0.5"
+                                fill="currentColor"
+                                className="ai-sparkle"
+                              />
+                              <circle
+                                cx="17"
+                                cy="2"
+                                r="0.5"
+                                fill="currentColor"
+                                className="ai-sparkle"
+                              />
+                              <circle
+                                cx="19"
+                                cy="22"
+                                r="0.5"
+                                fill="currentColor"
+                                className="ai-sparkle"
+                              />
+                              <circle
+                                cx="5"
+                                cy="21"
+                                r="0.5"
+                                fill="currentColor"
+                                className="ai-sparkle"
+                              />
                             </svg>
                           </div>
                           <h3 className="text-lg font-inter font-semibold text-gray-200 mb-2 tracking-wide">
