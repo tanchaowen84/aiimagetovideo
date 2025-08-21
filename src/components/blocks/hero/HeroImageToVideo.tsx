@@ -12,6 +12,7 @@ import {
 } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/outline';
+import { Video } from 'lucide-react';
 
 import React, { useState, useRef } from 'react';
 
@@ -126,8 +127,8 @@ export function HeroImageToVideo() {
             Transform Your Images with AI
           </p>
           <p className="mt-4 text-lg font-inter text-gray-300 max-w-3xl mx-auto leading-relaxed text-cinema-description">
-            Create stunning videos from any image using AI. Simple, fast, and no
-            experience needed.
+            Create stunning videos from any image using AI - simple, fast, and
+            no experience needed.
           </p>
         </div>
 
@@ -430,119 +431,8 @@ export function HeroImageToVideo() {
                         />
                       ) : (
                         <div className="text-center p-8">
-                          <div className="text-6xl mb-4 text-gray-500">
-                            <svg
-                              className="w-16 h-16 mx-auto video-preview-icon"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="1.5"
-                              viewBox="0 0 24 24"
-                            >
-                              {/* Film strip background */}
-                              <rect
-                                x="2"
-                                y="4"
-                                width="20"
-                                height="16"
-                                rx="2"
-                                ry="2"
-                                stroke="currentColor"
-                                strokeWidth="1.5"
-                                fill="none"
-                              />
-                              <rect
-                                x="2"
-                                y="6"
-                                width="2"
-                                height="2"
-                                fill="currentColor"
-                              />
-                              <rect
-                                x="2"
-                                y="10"
-                                width="2"
-                                height="2"
-                                fill="currentColor"
-                              />
-                              <rect
-                                x="2"
-                                y="14"
-                                width="2"
-                                height="2"
-                                fill="currentColor"
-                              />
-                              <rect
-                                x="2"
-                                y="18"
-                                width="2"
-                                height="2"
-                                fill="currentColor"
-                              />
-                              <rect
-                                x="20"
-                                y="6"
-                                width="2"
-                                height="2"
-                                fill="currentColor"
-                              />
-                              <rect
-                                x="20"
-                                y="10"
-                                width="2"
-                                height="2"
-                                fill="currentColor"
-                              />
-                              <rect
-                                x="20"
-                                y="14"
-                                width="2"
-                                height="2"
-                                fill="currentColor"
-                              />
-                              <rect
-                                x="20"
-                                y="18"
-                                width="2"
-                                height="2"
-                                fill="currentColor"
-                              />
-
-                              {/* Play button in center */}
-                              <polygon
-                                points="10,8 10,16 16,12"
-                                fill="currentColor"
-                              />
-
-                              {/* AI sparkles */}
-                              <circle
-                                cx="7"
-                                cy="3"
-                                r="0.5"
-                                fill="currentColor"
-                                className="ai-sparkle"
-                              />
-                              <circle
-                                cx="17"
-                                cy="2"
-                                r="0.5"
-                                fill="currentColor"
-                                className="ai-sparkle"
-                              />
-                              <circle
-                                cx="19"
-                                cy="22"
-                                r="0.5"
-                                fill="currentColor"
-                                className="ai-sparkle"
-                              />
-                              <circle
-                                cx="5"
-                                cy="21"
-                                r="0.5"
-                                fill="currentColor"
-                                className="ai-sparkle"
-                              />
-                            </svg>
+                          <div className="mb-4 text-gray-500">
+                            <Video className="w-16 h-16 mx-auto video-preview-icon" />
                           </div>
                           <h3 className="text-lg font-inter font-semibold text-gray-200 mb-2 tracking-wide">
                             Your video will appear here
