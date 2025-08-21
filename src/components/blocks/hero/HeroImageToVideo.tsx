@@ -127,8 +127,7 @@ export function HeroImageToVideo() {
             Transform Your Images with AI
           </p>
           <p className="mt-4 text-lg font-inter text-gray-300 max-w-3xl mx-auto leading-relaxed text-cinema-description">
-            Create stunning videos from any image using AI - simple, fast, and
-            no experience needed.
+            Transform any image into stunning videos with AI - fast and simple.
           </p>
         </div>
 
