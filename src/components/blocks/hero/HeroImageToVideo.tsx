@@ -107,7 +107,15 @@ export function HeroImageToVideo() {
   const canGenerate = job.uploadedFile && promptInput.trim() && !isLoading;
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-gray-900 to-black py-20">
+    <section
+      className="relative overflow-hidden py-20"
+      style={{
+        backgroundImage: `linear-gradient(to bottom right, rgba(15, 23, 42, 0.8), rgba(17, 24, 39, 0.8), rgba(0, 0, 0, 0.8)), url('/background/bg.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Hero Header */}
         <div className="text-center mb-12">
