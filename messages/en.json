@@ -600,83 +600,83 @@
     "description": "Transform Your Images with AI",
     "hero": {
       "title": "AI Image to Video - Transform Your Images with AI",
-      "description": "Create stunning videos from any image using AI. Simple, fast, and no experience needed.",
-      "introduction": "Introducing AI Image to Video",
-      "primary": "Start Creating",
+      "description": "Create stunning videos from any image using advanced AI technology. Our AI image to video generator makes it simple, fast, and requires no experience.",
+      "introduction": "Professional AI Image to Video Generator",
+      "primary": "Start Creating Videos",
       "secondary": "See Demo"
     },
     "logocloud": {
       "title": "Your favorite companies are our partners"
     },
     "useCases": {
-      "title": "Use Cases",
-      "subtitle": "Let AI Handle the Heavy Lifting",
-      "description": "FlowChart AI helps you map out complex processes, brainstorm ideas, and build professional diagrams—faster and easier than ever before.",
-      "tryNow": "Start with FlowChart AI",
+      "title": "Transform Images into Videos",
+      "subtitle": "Perfect for Every Creative Need",
+      "description": "Our AI image to video technology empowers creators, marketers, and businesses to bring static images to life with professional video content.",
+      "tryNow": "Try AI Image to Video",
       "items": {
         "item-1": {
-          "title": "Product Management",
-          "description": "Transform product ideas into actionable roadmaps. Create detailed user journey maps, feature prioritization matrices, and sprint planning workflows. AI helps you visualize complex product ecosystems and stakeholder relationships with precision."
+          "title": "Social Media Content",
+          "description": "Create engaging video posts for Instagram, TikTok, and Facebook. Transform your photos into captivating video content that drives higher engagement and reaches more audiences across all social platforms."
         },
         "item-2": {
-          "title": "Software Development",
-          "description": "Architect robust systems with confidence. Design microservices architectures, API integration flows, database relationships, and deployment pipelines. Perfect for technical documentation and system design reviews."
+          "title": "Marketing & Advertising",
+          "description": "Convert product photos into dynamic marketing videos. Perfect for e-commerce listings, promotional campaigns, and brand storytelling that captures attention and increases conversion rates."
         },
         "item-3": {
-          "title": "Business Analysis",
-          "description": "Unlock insights through visual process mapping. Create comprehensive business process flows, decision trees, risk assessment matrices, and operational optimization diagrams that drive strategic decisions."
+          "title": "Real Estate Showcases",
+          "description": "Bring property photos to life with smooth camera movements and transitions. Create professional real estate videos that help potential buyers visualize spaces and increase property interest."
         },
         "item-4": {
-          "title": "Education & Training",
-          "description": "Enhance learning through visual storytelling. Build interactive curriculum maps, concept relationship diagrams, assessment workflows, and training progression paths that engage students and improve comprehension."
+          "title": "Educational Content",
+          "description": "Transform educational images into engaging video lessons. Perfect for online courses, tutorials, and presentations that need to capture student attention and improve learning outcomes."
         },
         "item-5": {
-          "title": "Startup Planning",
-          "description": "Turn startup vision into executable strategy. Visualize business model canvases, funding pipelines, go-to-market strategies, and operational workflows. Essential for pitch decks and investor presentations."
+          "title": "Business Presentations",
+          "description": "Convert static slides and charts into dynamic presentation videos. Make your business pitches more compelling with animated visuals that keep audiences engaged throughout your presentation."
         },
         "item-6": {
-          "title": "Project Management",
-          "description": "Orchestrate complex projects with clarity. Design project timelines, resource allocation flows, risk mitigation processes, and team collaboration workflows. Keep stakeholders aligned and projects on track."
+          "title": "Creative Projects",
+          "description": "Turn artwork, photography, and creative images into stunning video pieces. Perfect for portfolios, art exhibitions, and creative storytelling that showcases your work in motion."
         }
       }
     },
     "demo": {
-      "title": "See FlowChart AI in Action",
-      "subtitle": "From Idea to Flowchart in Seconds",
-      "description": "Watch how FlowChart AI turns natural language prompts into precise, presentation-ready flowcharts — no design skills or manual effort needed.",
-      "tryItNow": "Use FlowChart AI Now",
+      "title": "See AI Image to Video in Action",
+      "subtitle": "From Static Image to Dynamic Video",
+      "description": "Watch how our AI image to video generator transforms any photo into professional-quality video content in seconds — no video editing skills required.",
+      "tryItNow": "Try AI Image to Video Now",
       "features": {
         "feature-1": {
-          "title": "Natural Language Input",
-          "description": "Simply describe your process in Language you like — no shapes, templates, or special tools required"
+          "title": "Upload Any Image",
+          "description": "Simply upload your photo in JPG, PNG, or WebP format — our AI handles the rest automatically"
         },
         "feature-2": {
-          "title": "AI-Powered Generation",
-          "description": "FlowChart AI Automatically generates clean, logical diagrams based on your input"
+          "title": "AI-Powered Animation",
+          "description": "Advanced AI technology analyzes your image and creates smooth, natural motion effects"
         },
         "feature-3": {
-          "title": "Instant Editing",
-          "description": "Customize and refine your diagram, Easily adjust elements, add details, and make it your own"
+          "title": "Instant Results",
+          "description": "Get your professional video in seconds with multiple resolution options and customizable settings"
         }
       }
     },
     "howItWorks": {
-      "title": "Start in 3 Easy Steps",
-      "subtitle": "No Experience Needed",
-      "description": "FlowChart AI makes creating flowcharts as simple as typing your thoughts. Whether you're a beginner or a pro, you can go from messy ideas to structured diagrams in minutes—without any design tools.",
+      "title": "Create Videos in 3 Simple Steps",
+      "subtitle": "No Video Editing Experience Required",
+      "description": "Our AI image to video generator makes video creation as simple as uploading a photo. Transform any image into professional video content in minutes.",
       "steps": {
         "step-1": {
-          "title": "Just Type What You Need",
-          "description": "Start by describing your process, structure, or system in natural language. FlowChart AI understands what you mean—even if it's not perfectly written.",
+          "title": "Upload Your Image",
+          "description": "Start by uploading any photo in JPG, PNG, or WebP format. Our AI image to video system accepts high-quality images up to 10MB.",
           "details": [
-            "Describe your workflow in plain English—FlowChart AI handles the diagram generation",
-            "FlowChart AI supports business logic, software systems, and educational use cases",
-            "AI-powered understanding of both concise and complex process descriptions"
+            "Support for all common image formats including JPG, PNG, and WebP",
+            "High-resolution image processing for professional video quality",
+            "Secure upload with automatic image optimization"
           ]
         },
         "step-2": {
-          "title": "FlowChart AI Builds Your Diagram",
-          "description": "FlowChart AI transforms your input into a clean, structured flowchart using intelligent shape detection and layout optimization.",
+          "title": "Describe the Motion",
+          "description": "Tell our AI what kind of movement or animation you want. Our advanced AI image to video technology understands natural language descriptions.",
           "details": [
             "Automatically generates accurate diagrams with FlowChart AI’s layout engine",
             "Optimized visual structure for readability and presentation",
@@ -684,7 +684,7 @@
           ]
         },
         "step-3": {
-          "title": "Edit, Manage & Save",
+          "title": "Download Your Video",
           "description": "Make adjustments using FlowChart AI’s intuitive editor. Save diagrams to your personal workspace, manage your flowcharts, and return to refine or export when needed.",
           "details": [
             "Edit using FlowChart AI’s drag-and-drop canvas—fast and intuitive",
@@ -693,44 +693,44 @@
           ]
         }
       },
-      "getStarted": "Using FlowChart AI Now"
+      "getStarted": "Start Creating Videos Now"
     },
     "aiCapabilities": {
-      "title": "FlowChart AI Capabilities",
-      "subtitle": "Smarter Diagrams Powered by Advanced AI",
-      "description": "FlowChart AI uses state-of-the-art language models and layout engines to turn your ideas into perfect, presentation-ready flowcharts—fast, accurate, and effortless.",
-      "capability-1": "Natural Language Processing – FlowChart AI understands messy or vague input and translates it into structured diagrams",
-      "capability-2": "Smart Layout Engine – Automatically arranges elements logically and visually for maximum clarity",
-      "capability-3": "AI-Powered Edits – Update and expand existing flowcharts without starting over",
+      "title": "Advanced AI Image to Video Technology",
+      "subtitle": "Powered by State-of-the-Art AI",
+      "description": "Our AI image to video system uses advanced machine learning models to understand images and generate realistic motion with professional quality results.",
+      "capability-1": "Deep Image Understanding – Our AI analyzes every detail of your image to create natural and realistic motion effects",
+      "capability-2": "Smart Motion Synthesis – Advanced algorithms generate smooth, professional-quality video animations from static images",
+      "capability-3": "High-Quality Output – Produce videos in multiple resolutions (480p, 580p, 720p) suitable for any platform or use case",
       "capability-4": "Multi-language Input – Describe your flowcharts in any language you’re comfortable with",
-      "capability-5": "Context-Aware Suggestions – FlowChart AI intelligently recommends diagram elements and connections based on your intent"
+      "capability-5": "Multiple Format Support – Works with JPG, PNG, and WebP images, outputting high-quality MP4 videos ready for use"
     },
     "comparison": {
-      "title": "Why Choose FlowChart AI?",
+      "title": "Why Choose Our AI Image to Video Generator?",
       "subtitle": "See the Difference",
-      "description": "Compare FlowChart AI with traditional flowchart tools and see why professionals choose us.",
+      "description": "Compare our AI image to video solution with traditional video editing tools and see why creators choose us.",
       "traditional": {
-        "title": "Traditional Tools",
+        "title": "Traditional Video Editing",
         "subtitle": "Time-consuming and complex",
-        "item-1": "Hours of manual drawing and positioning",
-        "item-2": "Steep learning curve for complex software",
-        "item-3": "Difficult collaboration and sharing",
-        "item-4": "Manual updates when changes are needed",
-        "item-5": "Limited template and shape libraries",
-        "item-6": "Version control and backup challenges",
-        "item-7": "Expensive licensing and subscription fees",
-        "item-8": "Platform-specific compatibility issues"
+        "item-1": "Hours of manual video editing and keyframe animation",
+        "item-2": "Steep learning curve for professional video software",
+        "item-3": "Expensive software licenses and subscriptions",
+        "item-4": "Complex timeline editing and effect management",
+        "item-5": "Requires advanced technical skills and experience",
+        "item-6": "Time-intensive rendering and processing",
+        "item-7": "Limited creative options without expertise",
+        "item-8": "Hardware-intensive requirements for smooth editing"
       },
       "flowchartAi": {
-        "title": "FlowChart AI",
+        "title": "AI Image to Video",
         "subtitle": "Fast, intelligent, and intuitive",
-        "item-1": "Generate flowcharts in seconds with AI",
-        "item-2": "Natural language input - no training needed",
-        "item-3": "Built-in collaboration and real-time sharing",
-        "item-4": "AI-assisted modifications and updates",
-        "item-5": "Unlimited templates and smart suggestions",
-        "item-6": "Automatic version history and cloud backup",
-        "item-7": "Affordable pricing with generous free tier",
+        "item-1": "Generate professional videos in seconds with AI",
+        "item-2": "Simple upload and describe - no training needed",
+        "item-3": "Multiple resolution options for any platform",
+        "item-4": "AI-powered motion analysis and generation",
+        "item-5": "High-quality output suitable for professional use",
+        "item-6": "Instant processing with immediate results",
+        "item-7": "Affordable pricing with transparent costs",
         "item-8": "Works seamlessly across all devices and browsers"
       }
     },
@@ -773,25 +773,25 @@
       "secondaryButton": "See Demo"
     },
     "features": {
-      "title": "Features",
-      "subtitle": "AI-Powered Flowchart Creation",
-      "description": "FlowChart AI offers a comprehensive set of features designed to make diagramming effortless, intelligent, and collaborative.",
+      "title": "Powerful Features",
+      "subtitle": "AI-Powered Video Creation",
+      "description": "Our AI image to video platform offers comprehensive features designed to make video creation effortless, intelligent, and professional.",
       "items": {
         "item-1": {
-          "title": "Natural Language to Diagram",
-          "description": "Describe your process or idea in plain language, and let AI instantly turn it into a professional flowchart. No design skills or technical jargon required—just explain your workflow and see it visualized."
+          "title": "Smart Image Analysis",
+          "description": "Upload any image and our AI automatically analyzes the content, depth, and composition to create the most natural motion effects. No technical knowledge required—just upload and describe your vision."
         },
         "item-2": {
-          "title": "Personal Workspace & Diagram Library",
-          "description": "Keep all your diagrams organized in one place. Our platform provides a personal workspace where you can access, manage, and continue editing your saved diagrams with ease."
+          "title": "Multiple Resolution Options",
+          "description": "Choose from 480p, 580p, or 720p output quality based on your needs. Whether for social media, presentations, or professional use, get the perfect resolution every time."
         },
         "item-3": {
-          "title": "Intuitive Drag-and-Drop Editor",
-          "description": "Easily refine and customize your diagram with a user-friendly canvas. Move elements, adjust connections, and apply styles with simple drag-and-drop—no learning curve."
+          "title": "Natural Language Processing",
+          "description": "Simply describe the motion you want in plain English. Our AI image to video technology understands complex descriptions and translates them into smooth, realistic animations."
         },
         "item-4": {
-          "title": "Export & Integrate Anywhere",
-          "description": "Export your diagrams in Excalidraw format for editing or backup. Support for PNG, SVG, and PDF exports is coming soon to broaden your sharing and presentation options."
+          "title": "Instant Video Generation",
+          "description": "Get professional-quality videos in seconds, not hours. Our optimized AI image to video processing delivers fast results without compromising on quality or detail."
         }
       }
     },
@@ -836,49 +836,49 @@
       }
     },
     "pricing": {
-      "title": "Pricing",
-      "subtitle": "Pricing",
-      "description": "Choose the plan that works best for you"
+      "title": "Simple, Transparent Pricing",
+      "subtitle": "Choose the Perfect Plan for Your Needs",
+      "description": "Start creating amazing videos with our AI image to video generator. No hidden fees, cancel anytime."
     },
     "faqs": {
-      "title": "FAQ",
-      "subtitle": "Frequently Asked Questions",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything You Need to Know About AI Image to Video",
       "items": {
         "item-1": {
-          "question": "Is there a free version of FlowChart AI?",
-          "answer": "Yes. FlowChart AI is open-sourced under the MIT License and available on GitHub. You can self-host and modify it freely. We also offer a free tier — every registered user can generate one AI flowchart per day for free."
+          "question": "What is AI image to video technology?",
+          "answer": "AI image to video is an advanced technology that uses artificial intelligence to transform static images into dynamic videos. Our system analyzes your image and generates realistic motion effects, creating professional-quality videos in seconds."
         },
         "item-2": {
-          "question": "What formats can I export my diagrams to?",
-          "answer": "Currently, we support exporting flowcharts in Excalidraw format only. In future updates, we plan to add support for PDF, PNG, and SVG formats."
+          "question": "What image formats are supported?",
+          "answer": "Our AI image to video generator supports JPG, PNG, and WebP image formats. Images can be up to 10MB in size, and we automatically optimize them for the best video generation results."
         },
         "item-3": {
-          "question": "Can I manage my flowcharts and access them later?",
-          "answer": "Yes. FlowChart AI provides a personal workspace where you can save, manage, and edit your flowcharts anytime, from anywhere."
+          "question": "How long does it take to generate a video?",
+          "answer": "Our AI image to video generator typically creates videos in 15-30 seconds, depending on the complexity of your image and the motion description. This is significantly faster than traditional video editing methods."
         },
         "item-4": {
-          "question": "What AI capabilities does FlowChart AI offer?",
-          "answer": "FlowChart AI allows users to describe their processes or workflows in natural language. The AI interprets the input, handles intelligent layout and diagram structure, and generates editable flowcharts accordingly."
+          "question": "What video resolutions are available?",
+          "answer": "Our AI image to video platform offers three resolution options: 480p for fast processing, 580p for balanced quality and speed, and 720p for the highest quality output suitable for professional use."
         },
         "item-5": {
-          "question": "How can I upgrade or change my plan?",
-          "answer": "Yes. You can freely upgrade, downgrade, or cancel your plan through your account's billing settings."
+          "question": "Can I use the generated videos commercially?",
+          "answer": "Yes. All videos created with our AI image to video generator can be used for commercial purposes, including marketing, advertising, social media content, and business presentations."
         },
         "item-6": {
-          "question": "How complex of a flowchart can FlowChart AI generate?",
-          "answer": "There is no strict limit on the complexity of flowcharts. The actual capability depends on the content and structure of your input."
+          "question": "How do I write effective motion descriptions?",
+          "answer": "Use clear, descriptive language to explain the movement you want. For example: 'camera slowly zooms in' or 'gentle left-to-right pan'. Our AI image to video system understands natural language and creates realistic motion accordingly."
         },
         "item-7": {
-          "question": "How do I write effective prompts?",
-          "answer": "Use clear natural language and structured steps. You may optionally upload reference images to aid AI understanding. FlowChart AI will then convert your input into a structured diagram."
+          "question": "What types of images work best?",
+          "answer": "Our AI image to video generator works with all types of images - portraits, landscapes, products, artwork, and more. High-resolution images with clear subjects typically produce the best motion effects."
         },
         "item-8": {
-          "question": "Can teams collaborate on flowcharts?",
-          "answer": "Currently, FlowChart AI is built for individual use. Team collaboration and shared workspaces are part of our future roadmap."
+          "question": "Is there a free version available?",
+          "answer": "Yes, we offer a free tier that allows you to try our AI image to video generator. Create your first videos and experience the quality before choosing a paid plan."
         },
         "item-9": {
-          "question": "Can I generate diagrams from uploaded documents?",
-          "answer": "At the moment, FlowChart AI supports text and image inputs only. Support for document uploads including PDF, Markdown, and other formats is under active development."
+          "question": "How can I upgrade or change my plan?",
+          "answer": "You can easily upgrade, downgrade, or cancel your plan through your account settings. All plan changes take effect immediately with transparent billing."
         }
       }
     },
@@ -977,10 +977,10 @@
       }
     },
     "calltoaction": {
-      "title": "Ready to Create Amazing Flowcharts?",
-      "description": "Join thousands of users who are already creating professional diagrams with FlowChart AI",
-      "primaryButton": "Start Creating",
-      "secondaryButton": "Learn More"
+      "title": "Ready to Transform Your Images?",
+      "description": "Join thousands of creators using our AI image to video generator to bring their images to life with professional video content",
+      "primaryButton": "Start Creating Videos",
+      "secondaryButton": "See Examples"
     }
   },
   "AITextPage": {
